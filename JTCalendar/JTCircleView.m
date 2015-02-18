@@ -50,4 +50,9 @@
     [self setNeedsDisplay];
 }
 
+- (void)setData:(id)data
+{
+    
+}
+
 @end

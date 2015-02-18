@@ -74,6 +74,7 @@
     self.dayDotColorTodayOtherMonth = self.dayDotColorToday;
 
     self.circleViewClass = [JTCircleView class];
+    self.showDotOnEvent = YES;
     
     self.monthBlock = ^NSString *(NSDate *date, JTCalendar *jt_calendar){
         NSCalendar *calendar = jt_calendar.calendarAppearance.calendar;

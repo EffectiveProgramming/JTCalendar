@@ -87,18 +87,18 @@
 
 #pragma mark - JTCalendarDataSource
 
-- (BOOL)calendarHaveEvent:(JTCalendar *)calendar date:(NSDate *)date
+- (id)calendar:(JTCalendar *)calendar dataForDate:(NSDate *)date
 {
     NSString *key = [[self dateFormatter] stringFromDate:date];
     
     if(eventsByDate[key] && [eventsByDate[key] count] > 0){
-        return YES;
+        return eventsByDate[key];
     }
     
-    return NO;
+    return nil;
 }
 
-- (void)calendarDidDateSelected:(JTCalendar *)calendar date:(NSDate *)date
+- (void)calendar:(JTCalendar *)calendar didSelectDate:(NSDate *)date
 {
     NSString *key = [[self dateFormatter] stringFromDate:date];
     NSArray *events = eventsByDate[key];
