@@ -188,11 +188,13 @@ static NSString *const kJTCalendarDaySelected = @"kJTCalendarDaySelected";
             circleView.color = [self.calendarManager.calendarAppearance dayCircleColorSelected];
             textLabel.textColor = [self.calendarManager.calendarAppearance dayTextColorSelected];
             dotView.color = [self.calendarManager.calendarAppearance dayDotColorSelected];
+            dotView.layer.borderColor = [self.calendarManager.calendarAppearance dayDotColorSelected].CGColor;
         }
         else{
             circleView.color = [self.calendarManager.calendarAppearance dayCircleColorSelectedOtherMonth];
             textLabel.textColor = [self.calendarManager.calendarAppearance dayTextColorSelectedOtherMonth];
             dotView.color = [self.calendarManager.calendarAppearance dayDotColorSelectedOtherMonth];
+            dotView.layer.borderColor = [self.calendarManager.calendarAppearance dayDotColorSelectedOtherMonth].CGColor;
         }
 
         circleView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.1, 0.1);
@@ -203,21 +205,25 @@ static NSString *const kJTCalendarDaySelected = @"kJTCalendarDaySelected";
             circleView.color = [self.calendarManager.calendarAppearance dayCircleColorToday];
             textLabel.textColor = [self.calendarManager.calendarAppearance dayTextColorToday];
             dotView.color = [self.calendarManager.calendarAppearance dayDotColorToday];
+            dotView.layer.borderColor = [self.calendarManager.calendarAppearance dayDotColorToday].CGColor;
         }
         else{
             circleView.color = [self.calendarManager.calendarAppearance dayCircleColorTodayOtherMonth];
             textLabel.textColor = [self.calendarManager.calendarAppearance dayTextColorTodayOtherMonth];
             dotView.color = [self.calendarManager.calendarAppearance dayDotColorTodayOtherMonth];
+            dotView.layer.borderColor = [self.calendarManager.calendarAppearance dayDotColorTodayOtherMonth].CGColor;
         }
     }
     else{
         if(!self.isOtherMonth){
             textLabel.textColor = [self.calendarManager.calendarAppearance dayTextColor];
             dotView.color = [self.calendarManager.calendarAppearance dayDotColor];
+            dotView.layer.borderColor = [self.calendarManager.calendarAppearance dayDotColor].CGColor;
         }
         else{
             textLabel.textColor = [self.calendarManager.calendarAppearance dayTextColorOtherMonth];
             dotView.color = [self.calendarManager.calendarAppearance dayDotColorOtherMonth];
+            dotView.layer.borderColor = [self.calendarManager.calendarAppearance dayDotColorOtherMonth].CGColor;
         }
 
         opacity = 0.;
@@ -244,8 +250,9 @@ static NSString *const kJTCalendarDaySelected = @"kJTCalendarDaySelected";
 - (void)reloadData
 {
     id dataForEvent = [self.calendarManager.dataCache dataForEvent:self.date];
-    circleView.data = dataForEvent;
-    
+    dotView.data = dataForEvent;
+    dotView.layer.borderWidth = 1;
+
     if (self.calendarManager.calendarAppearance.showDotOnEvent) {
         dotView.hidden = (dataForEvent == nil);
     }
@@ -310,7 +317,7 @@ static NSString *const kJTCalendarDaySelected = @"kJTCalendarDaySelected";
     backgroundView.backgroundColor = self.calendarManager.calendarAppearance.dayBackgroundColor;
     backgroundView.layer.borderWidth = self.calendarManager.calendarAppearance.dayBorderWidth;
     backgroundView.layer.borderColor = self.calendarManager.calendarAppearance.dayBorderColor.CGColor;
-
+    
     [self configureConstraintsForSubviews];
     [self setSelected:isSelected animated:NO];
 }

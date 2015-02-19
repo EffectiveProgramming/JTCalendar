@@ -19,6 +19,7 @@
 		4EE4946E96F95FBC3273A41A /* JTCalendarMonthWeekDaysView.m in Sources */ = {isa = PBXBuildFile; fileRef = AABA86B4AFCABA4B728783C6 /* JTCalendarMonthWeekDaysView.m */; };
 		541C0CBFB3C59C2EF80ECD13 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CEE0CD4D71D6439583F7F9 /* Pods-dummy.m */; };
 		6588410317FC4848100F4E89 /* JTCalendarDayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 085DE24EF7969AC19E5655CE /* JTCalendarDayView.h */; };
+		65EDA29C1A95FB3F004ABC75 /* JTDayViewProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 65EDA29B1A95FB3F004ABC75 /* JTDayViewProtocol.h */; };
 		6765C3FA1435A96903D2952F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EC1391D955FABAC75AA8E6 /* Foundation.framework */; };
 		7428119C229135017DACAB32 /* JTCalendarMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE589932169D052D5D07FC8 /* JTCalendarMenuView.m */; };
 		7F43801665D14F4BA9A7CB97 /* JTCalendarMonthView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC166D7165C16A935AE19795 /* JTCalendarMonthView.h */; };
@@ -68,7 +69,7 @@
 		462038AFDA7EE57E0DCBCDA3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
 		5F93FC1ACE836FC9EC2A541B /* Pods-JTCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JTCalendar-prefix.pch"; sourceTree = "<group>"; };
 		62A0329C2CF1720425B432D5 /* JTCalendarMonthView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarMonthView.m; path = JTCalendar/JTCalendarMonthView.m; sourceTree = "<group>"; };
-		65B291B11A94F05E00417472 /* JTDayViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTDayViewProtocol.h; sourceTree = "<group>"; };
+		65EDA29B1A95FB3F004ABC75 /* JTDayViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTDayViewProtocol.h; path = JTCalendar/JTDayViewProtocol.h; sourceTree = "<group>"; };
 		6DE589932169D052D5D07FC8 /* JTCalendarMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarMenuView.m; path = JTCalendar/JTCalendarMenuView.m; sourceTree = "<group>"; };
 		71639129E02E427DB5A84E94 /* JTCalendarMonthWeekDaysView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarMonthWeekDaysView.h; path = JTCalendar/JTCalendarMonthWeekDaysView.h; sourceTree = "<group>"; };
 		79408052204516CD80A2C76B /* JTCalendarAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarAppearance.h; path = JTCalendar/JTCalendarAppearance.h; sourceTree = "<group>"; };
@@ -179,6 +180,7 @@
 		AE36BC737EB34C2939428C01 /* JTCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				65EDA29B1A95FB3F004ABC75 /* JTDayViewProtocol.h */,
 				0987777C15D0F6D53F3961D4 /* JTCalendar.h */,
 				A6C25E7E75545A384F1136B2 /* JTCalendar.m */,
 				79408052204516CD80A2C76B /* JTCalendarAppearance.h */,
@@ -202,7 +204,6 @@
 				3203603360D52C588C3DFD96 /* JTCalendarWeekView.m */,
 				2B2F7004F8D2DF162B8D11C8 /* JTCircleView.h */,
 				A4126921B45F16480FA68726 /* JTCircleView.m */,
-				65B291B11A94F05E00417472 /* JTDayViewProtocol.h */,
 				46012E558DCE28E31F49513F /* Support Files */,
 			);
 			name = JTCalendar;
@@ -227,6 +228,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65EDA29C1A95FB3F004ABC75 /* JTDayViewProtocol.h in Headers */,
 				197B1B0E6297523F91A3658D /* JTCalendar.h in Headers */,
 				D4705901389D2AB2BB4D9F01 /* JTCalendarAppearance.h in Headers */,
 				95B1A37EA7865AA169DD64CE /* JTCalendarContentView.h in Headers */,

@@ -11,5 +11,6 @@
 @interface JTCircleView : UIView <JTDayViewProtocol>
 
 @property (nonatomic, strong) UIColor *color;
+@property (nonatomic, strong) id data;
 
 @end
