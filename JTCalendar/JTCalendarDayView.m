@@ -138,7 +138,7 @@ static NSString *const kJTCalendarDaySelected = @"kJTCalendarDaySelected";
 
     [[NSNotificationCenter defaultCenter] postNotificationName:kJTCalendarDaySelected object:self.date];
 
-    [self.calendarManager.dataSource calendar:self.calendarManager dataForDate:self.date];
+    [self.calendarManager.dataSource calendar:self.calendarManager didSelectDate:self.date];
 
     if(!self.isOtherMonth || !self.calendarManager.calendarAppearance.autoChangeMonth){
         return;
